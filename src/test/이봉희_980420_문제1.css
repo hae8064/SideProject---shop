@@ -1,0 +1,49 @@
+body{
+    width: 1000px;
+    height: 600px;
+}
+
+#top{
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+}
+
+.topItem1 {
+    border: 1px solid;
+    flex-grow: 2;
+}
+
+.topItem2 {
+    flex-grow: 1.5;
+    border: 1px solid;
+    height: 100px;
+}
+
+.topRightItem{
+    height: 100px;
+    border: 1px solid;
+}
+
+#middle{
+    border: 1px solid;
+    width: 1000px;
+    height: 200px;
+}
+
+#bottom {
+    width: 1000px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+}
+
+.botItem{
+    width: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: flex-start;
+    border: 1px solid;
+}

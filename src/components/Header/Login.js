@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "../../App.css";
+import Nav from '../Nav/Nav';
 import Header from './Header';
 
 function Login() {
@@ -21,6 +22,7 @@ function Login() {
     return (
         <>
         <Header />
+        <Nav />
             <div className='loginRegister'>
                 <form>
                     <div>
