@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from './components/banner';
 import Header from './components/Header/Header'
+import BestGrid from './components/Nav/BestGrid';
 import Nav from './components/Nav/Nav';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
         <Header /> 
         <Nav />
         <Banner />
+        <BestGrid />
     </div>
   );
 }
