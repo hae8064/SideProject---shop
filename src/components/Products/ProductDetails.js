@@ -8,12 +8,24 @@ import "./ProductDetail.css";
 function ProductDetails() {
     const {id} = useParams();
     const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         axios.get("/data/products.json").then((data) => {
             setProduct(data.data.products.find((product) => product.id === parseInt(id)));
         });
     }, [id]);
+
+    const plusHandle = () => {
+        setQuantity(quantity+1);
+    }
+
+    const minusHandle = () => {
+        if(quantity === 1){
+            return;
+        }
+        setQuantity(quantity-1);
+    }
 
     console.log(product);
 
@@ -22,15 +34,15 @@ function ProductDetails() {
         <Header /> 
         <Nav />
         <div className='productDetails'>
-                <img src = {require("../../imgs//banner1.jpg")} alt='상세이미지'></img>
+                <img src = {product.image} alt='상세이미지'></img>
                 <div className='detail2'>
-                    <div className='detailTitle'>Best1</div>
-                    <div className='detailPrice'>20000</div>
+                    <div className='detailTitle'>{product.name}</div>
+                    <div className='detailPrice'>{product.price}</div>
                     <div className='detailCount'>
                         주문수량 
-                        <span className='detailCountNumber'> 1</span>
-                        <button className='plusButton'>+</button>
-                        <button className='minusButton'>-</button>
+                        <span className='detailCountNumber'> {quantity}</span>
+                        <button className='plusButton' onClick={plusHandle}>+</button>
+                        <button className='minusButton' onClick={minusHandle}>-</button>
                     </div>
                     <div className='detailButtons'>
                         <button className='detailCart'>장바구니 담기</button>

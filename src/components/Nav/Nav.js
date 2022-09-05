@@ -5,7 +5,7 @@ import "../../App.css";
 function Nav() {
     return (
         <div className='nav'>
-            <ul className='nav1'><Link to = "/home">Home</Link></ul>
+            <ul className='nav1'><Link to = "/">Home</Link></ul>
             <ul className='nav2'><Link to = "/best">Best</Link></ul>
             <ul className='nav3'><Link to = "/top">Top</Link></ul>
             <ul className='nav4'><Link to = "/bottom">Bottom</Link></ul>
