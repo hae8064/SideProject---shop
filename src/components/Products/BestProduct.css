@@ -1,0 +1,48 @@
+.bestProducts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 25%;
+}
+
+.product_img_div {
+    text-align: center;
+}
+
+.product_img {
+    max-width: 25%;
+    max-height: 95%;
+    object-fit: contain;
+}
+
+.product_title{
+    font-size : 1.3rem;
+    font-weight: 600;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.product_mon{
+    padding-top: 0pxs;
+    font-size : 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product_link_div{
+    text-align: center;
+}
+
+.product_link{
+    position:inherit;
+    font-size : 1.0rem;
+    font-weight: 500;
+    text-decoration: none;
+    background : grey;
+    color : white;
+    border-radius : 10px;
+    padding :5px;
+}

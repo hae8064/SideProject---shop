@@ -47,6 +47,6 @@ document.getElementById("resultButton").addEventListener("click", () => {
         choiceDrinks.push("콜라");
     }
     let moneyMessage = `총금액: ${money} \n 선택 가능 음료: ${choiceDrinks.toString()}`
-    // document.getElementById("result").innerHTML = moneyMessage;
+    
     document.getElementById("result").innerHTML = moneyMessage;
 })

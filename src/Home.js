@@ -4,13 +4,13 @@ import Header from './components/Header/Header'
 import BestGrid from './components/Nav/BestGrid';
 import Nav from './components/Nav/Nav';
 
-function Home() {
+function Home({products, setProducts, convertPrice}) {
   return (
     <div className='home'>
         <Header /> 
         <Nav />
         <Banner />
-        <BestGrid />
+        <BestGrid products={products} setProducts={setProducts} convertPrice={convertPrice}/>
     </div>
   );
 }

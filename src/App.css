@@ -71,7 +71,8 @@
 .product_container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    justify-content: center;
     width: 100%;
 }
 
@@ -79,6 +80,7 @@
     width: 25%;
     height: 100%;
     margin-bottom: 4%;
+    object-fit: cover;
 }
 
 .product_img_div {
@@ -87,7 +89,8 @@
 
 .product_img {
     max-width: 95%;
-    max-height: 100%;
+    max-height: 95%;
+    object-fit: contain;
 }
 
 .product_title{

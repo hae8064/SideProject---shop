@@ -20,7 +20,7 @@ function Banner() {
     return (
         <div className='banner'>
             <Slider {...settings}>
-                <img src={require('../imgs/banner4.png')} alt='배너이미지'/>
+                <img src= {require("../imgs/banner4.png")} alt='배너이미지'/>
                 <img src={require('../imgs/banner3.jpg')} alt='배너이미지'/>
                 <img src={require('../imgs/banner1.jpg')} alt='배너이미지'/>
                 <img src={require('../imgs/banner2.jpg')} alt='배너이미지'/>

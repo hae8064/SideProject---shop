@@ -1,0 +1,35 @@
+.productDetails{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+img{
+    width: 450px;
+    height: 400px;
+}
+
+.detail2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.detailTitle{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.detailPrice {
+
+}
+
+.detailCountNumber{
+    justify-content: center;
+    padding: 2px;
+    border: 1px solid grey;
+    margin: 10px;
+}

@@ -1,0 +1,60 @@
+{
+    "products": [
+        {
+            "id":1,
+            "name": "best1",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 30000,
+            "image": "../imgs/bestItems/best1.jpg"
+        },
+        {
+            "id":2,
+            "name": "best2",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 22000,
+            "image": "../imgs/bestItems/best2.jpg"
+        },
+        {
+            "id":3,
+            "name": "best3",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 21000,
+            "image": "../imgs/bestItems/best3.jpg"
+        },
+        {
+            "id":4,
+            "name": "best4",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 29000,
+            "image": "../imgs/bestItems/best4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "best5",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 33000,
+            "image": "../imgs/bestItems/best5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "best6",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 55000,
+            "image": "../imgs/bestItems/best6.jpg"
+        },
+        {
+            "id":7,
+            "name": "best9",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 21000,
+            "image": "../imgs/bestItems/best9.jpg"
+        },
+        {
+            "id":8,
+            "name": "best11",
+            "provider": "한여름에도 입을 수 있는 예쁜 니트",
+            "price": 19000,
+            "image": "../imgs/bestItems/best11.jpg"
+        }
+    ]
+}
