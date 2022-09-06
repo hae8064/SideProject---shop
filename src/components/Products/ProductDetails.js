@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
 import "./ProductDetail.css";
 
-function ProductDetails() {
+function ProductDetails({cartProducts, setCartProducts}) {
     const {id} = useParams();
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(1);
@@ -27,7 +27,23 @@ function ProductDetails() {
         setQuantity(quantity-1);
     }
 
-    console.log(product);
+    const cartHandle = () => {
+        product.quantity = quantity;
+
+        if(cartProducts.id === {id}) {
+            if(cartProducts.quantity === quantity){
+                return;
+            }else{
+                cartProducts.quantity = quantity;
+            }
+        }else{
+            setCartProducts(cartProducts2 => [...cartProducts2, product]);
+        }
+
+        console.log(cartProducts);
+    }
+
+
 
     return (
         <>
@@ -45,7 +61,7 @@ function ProductDetails() {
                         <button className='minusButton' onClick={minusHandle}>-</button>
                     </div>
                     <div className='detailButtons'>
-                        <button className='detailCart'>장바구니 담기</button>
+                        <button className='detailCart' onClick={cartHandle}>장바구니 담기</button>
                         <button className='detailPayment'>바로구매</button>
                     </div>
                 </div>
