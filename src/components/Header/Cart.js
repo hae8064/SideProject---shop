@@ -1,39 +1,50 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from '../Nav/Nav'
 import Header from './Header'
 import "./Cart.css";
 import axios from 'axios';
+import CartList from './CartList';
 
-function Cart({products, setProducts, convertPrice}) {
+function Cart({cartProducts, setCartProducts, convertPrice}) {
+
+    const [products, setProducts] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
-      axios.get("/data/products.json").then((data) => {
-          setProducts(data.data.products);
-      })
-  }, [setProducts]);
+      setProducts(cartProducts);
+      cartProducts.map((cartProducts) => {
+          // setTotalPrice(totalPrice + (cartProducts.price * cartProducts.quantity));
+          setTotalPrice( totalPrice => totalPrice + (cartProducts.price* cartProducts.quantity));
+      });
+    }, [cartProducts]);
 
-  console.log(products);
+  console.log(cartProducts);
+
   return (
-    
       <div className='cart'>
           <Header/>
           <h2>장바구니</h2>
           <hr/>
-          <div className='cartElement'>
-            <img src= {require("../../imgs/banner1.jpg")} alt="장바구니 이미지" />
 
-            <div className='cartRightPosition'>
-              <div className='cartTitle'>Best1</div>
-              <div className='cartPrice'>{convertPrice(20000)}원</div>
-              <div className='cartQuantity'>
-                주문수량: 1
-                <button className='plusButton'>+</button>
-                <button className='minusButton'> - </button>
-              </div>
+          {cartProducts.length === 0 ? (
+            <div>
+              <h2>장바구니에 상품이 없습니다..</h2>
+              <p>원하는 상품을 장바구니에 담아보세요!</p>
             </div>
+          ) : (cartProducts.map((cartProducts) => {
+            return <CartList key = {cartProducts.id+cartProducts.length+cartProducts.quantity}cartProducts={cartProducts} convertPrice={convertPrice}/>
+          }))}
 
-          </div>
-          <div className='cartTotalPrice'>총금액: 20000</div>
+          {cartProducts.length === 0 ? "" : (
+            <div className='cartTotalPrice'>
+              
+              총금액: {convertPrice(totalPrice)}
+              {/* 총금액: {(cartProducts.map((cartProducts) => {
+                setTotalPrice(totalPrice+cartProducts.price);
+              }))} */}
+
+            </div>
+          )}
       </div>
   );
 }

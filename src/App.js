@@ -14,7 +14,7 @@ function App() {
   const [cartProducts, setCartProducts] = useState([]);
 
   const convertPrice = (price) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   return (
@@ -22,9 +22,9 @@ function App() {
         <Routes>
           <Route path="/" element = {<Home products={products} setProducts={setProducts} convertPrice={convertPrice} cartProducts={cartProducts} setCartProducts={setCartProducts}/>} />
           <Route path="/login" element = {<Login />} />
-          <Route path="/cart" element = {<Cart products={cartProducts} setProducts = {setCartProducts} convertPrice={convertPrice}/>} />
+          <Route path="/cart" element = {<Cart cartProducts={cartProducts} setCartProducts = {setCartProducts} convertPrice={convertPrice}/>} />
           <Route path="/mypage" element = {<MyPage />} />
-          <Route path="/productDetail/:id" element = {<ProductDetails cartProducts={cartProducts} setCartProducts={setCartProducts}/>} />
+          <Route path="/productDetail/:id" element = {<ProductDetails cartProducts={cartProducts} setCartProducts={setCartProducts} convertPrice={convertPrice}/>} />
         </Routes>
       </div>
   );
